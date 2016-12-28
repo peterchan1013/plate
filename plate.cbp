@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="plate" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/plate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="../../opencv/opencv-2.4.13/include/opencv" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --cflags opencv`" />
+					<Add option="`pkg-config --libs opencv`" />
+					<Add library="../../../../../usr/local/lib/libopencv_core.so" />
+					<Add library="../../../../../usr/local/lib/libopencv_highgui.so" />
+					<Add directory="../../../../../usr/local/lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/plate" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add option="-s" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`opencv-config --cxxflags`" />
+			<Add directory="../../opencv/opencv-3.2.0" />
+		</Compiler>
+		<Linker>
+			<Add option="`pkg-config --cflags opencv`" />
+			<Add option="`pkg-config --libs opencv`" />
+			<Add library="../../../../../usr/local/lib/libopencv_core.so" />
+			<Add library="../../../../../usr/local/lib/libopencv_highgui.so" />
+			<Add directory="../../../../../usr/local/lib" />
+		</Linker>
+		<Unit filename="DetectRegions.cpp" />
+		<Unit filename="DetectRegions.h" />
+		<Unit filename="OCR.cpp" />
+		<Unit filename="OCR.h" />
+		<Unit filename="Plate.cpp" />
+		<Unit filename="Plate.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<lib_finder disable_auto="1" />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
