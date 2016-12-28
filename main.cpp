@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 	/*分类车牌号与非车牌号*/
 	FileStorage fs;
 	fs.open("/home/hxy/hxy/final_project/plate/SVM.xml",FileStorage::READ);
-
+    //
 	Mat SVM_TrainningData;
 	Mat SVM_Classes;
 
